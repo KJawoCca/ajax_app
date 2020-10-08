@@ -3,9 +3,8 @@
   <%= form.text_field :content %>
   <%= form.submit '投稿する' , id: "submit" %>
 <% end %>
-
 <% @posts.each do |i| %>
-  <div class="post">
+  <div class="post" data-id=<%= i.id %> data-check=<%= i.checked %>>
     <div class="post-date">
       投稿日時：<%= i.created_at %>
     </div>
